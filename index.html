@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
+    <title>Implementation</title>
     <link rel="stylesheet" href="dependency/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="blocpay.css">
     
@@ -16,7 +16,21 @@
 		$(document).ready(function(){
 			$("#bp").blocpay({
                 url : "https://aegis-staging.azurewebsites.net/invoice/pay/guest/7159630d-aaa1-46d0-bde0-23260350d407",
-                isModal: true
+                isModal: true,
+                width: 480,
+                height: 600,
+                title: "BlocPay Button",
+                url: 'https://www.blocpay.ca/', // url not work if event property is set to null
+                btn:{ // icon and text property is not working once you put something in customContent
+                    "class" : "blocpay-plain", //"blocpay-outline",
+                    "text": "BlocPay", 
+                    "icon": "assets/img/icon.png",
+                    "customContent": '<img src="https://img.icons8.com/material-outlined/24/000000/mouse-animal.png"/>',
+			        "event": null,
+                    "customEvent": function(){
+                        alert("widget")
+                    }
+                }
             });
 		});
 	</script>

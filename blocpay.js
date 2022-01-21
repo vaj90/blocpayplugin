@@ -55,7 +55,7 @@
 				$btn.append($("<span>").html(opt.btn.text))
 			}
 			if(opt.btn.customContent!=""){
-				$btn.html(opt.btn.custom)
+				$btn.html(opt.btn.customContent)
 			}
 			if(opt.btn.event!=null){
 				$btn.click(function(){
@@ -74,7 +74,7 @@
 			}
 			if(opt.btn.customEvent!=null){
 				$btn.click(function(){
-					opt.btn.customEvent
+					opt.btn.customEvent()
 				})
 			}
 			elem.append($btn)
