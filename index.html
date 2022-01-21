@@ -15,7 +15,6 @@
     <script type="text/javascript">
 		$(document).ready(function(){
 			$("#bp").blocpay({
-                url : "https://aegis-staging.azurewebsites.net/invoice/pay/guest/7159630d-aaa1-46d0-bde0-23260350d407",
                 isModal: true,
                 width: 480,
                 height: 600,
@@ -26,10 +25,10 @@
                     "text": "BlocPay", 
                     "icon": "assets/img/icon.png",
                     "customContent": '<img src="https://img.icons8.com/material-outlined/24/000000/mouse-animal.png"/>',
-			        "event": null,
-                    "customEvent": function(){
+			        //"event": null,
+                    /*"customEvent": function(){
                         alert("widget")
-                    }
+                    }*/
                 }
             });
 		});
