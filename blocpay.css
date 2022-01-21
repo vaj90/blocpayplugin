@@ -18,7 +18,9 @@
 .blocpay-plain{
     background-color: #007bff;
     color:#ffffff;
-    border-radius: 0.25rem;
+}
+.blocpay-rounded{
+    border-radius: 0.5rem;
 }
 .blocpay-outline{
     color: #000000;
